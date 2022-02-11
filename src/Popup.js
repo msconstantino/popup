@@ -6,8 +6,6 @@ import React from "react";
 import ContentstackUIExtension from "@contentstack/ui-extensions-sdk";
 
 export function Popup() {
-  const [message, setMessage] = useState("");
-  const [tableOutput, setTableOutput] = useState(null);
   const [error, setError] = useState(null);
   const [extension, setExtension] = useState(null);
   const [output, setOutput] = useState({});
@@ -43,7 +41,7 @@ export function Popup() {
     // eslint-disable-next-line no-restricted-globals
     if (self === top) {
       setError({
-        message: "This extension can only be used in the Contentstack",
+        message: error + "This extension can only be used in the Contentstack",
       });
     } else {
       ContentstackUIExtension.init().then((extension) => {
@@ -52,7 +50,7 @@ export function Popup() {
     }
 
     console.log(extension)
-  }, []);
+  }, [extension, error]);
 
   function onChangeHandler(data) {
     // const {value} = evt.currentTarget;

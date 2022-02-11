@@ -1,7 +1,7 @@
 
 import PropTypes from "prop-types";
 import React from "react";
-import { Button, TextInput, Select } from "@contentstack/venus-components";
+import { Button } from "@contentstack/venus-components";
 // Main Window.
 let browser = null;
 // child window.

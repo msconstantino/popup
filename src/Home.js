@@ -22,7 +22,7 @@ export function Home() {
       });
     }
 
-  }, []);
+  }, [message]);
 
   if (error) {
     return <p>Error: {error.message}</p>;

@@ -1,12 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   InstructionText,
-  InfiniteScrollTable,
-  Heading,
-  Paragraph,
+  InfiniteScrollTable
 } from "@contentstack/venus-components";
 import React from "react";
-import ContentstackUIExtension from "@contentstack/ui-extensions-sdk";
 import "../App.css";
 import { orderBy } from "lodash";
 
